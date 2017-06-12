@@ -1,0 +1,60 @@
+class rxFileError(Exception)
+
+class GauFile(object):
+   __init__(filename)
+   Str self.pwd
+   Str self.basename
+   GauCOM self._com
+   GauLOG self._log
+   GauFCHK self._fchk
+   Str self.comname
+   Str self.logname
+   Str self.chkname
+   Str self.fchkname
+
+   @property
+   GauCOM self.com
+   GauLOG self.log
+   GauFCHK self.fchk
+   GauCHK self.chk
+
+
+class GauFCHK(object):
+   __init__(parent)
+   GauFile self._parent
+
+   @property Str self.filename
+   @property Str self.abspath
+   @property Str xyz
+   def read():
+      # List[] atomcoords = [(x1,y1,z1),(x2,y2,z2),...,(xN,yN,zN)]
+      List[] self.atomcoords = [atomcoords1, atomcoords2,...]
+      Int[] self.atomnos
+      Int self.charge
+      Int self.mult
+      Int self.natom
+      List[] self.grads = [(fx1,fy1,fz1),...,(fxN,fyN,fzN)]
+      Float[] self.hessian
+      Float[] self.intforces
+      Float[] self.inthessian
+   Float findHessianElement(i,j)
+   Float[3x3] find33Hessian(i,j)
+   Float findintHessianElement(i,j)
+
+
+
+class GauCOM(object):
+    Str g09sub = 'g09'
+
+    __init__(parent):
+       GauFile self._parent
+    @property Str self.filename
+
+    Str[] __blocksplit__()
+
+    Bool run()
+
+class GauCHK(object):
+    @property Str self.filename
+    @property Str self.abspath
+    Bool formchk() 

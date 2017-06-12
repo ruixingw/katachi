@@ -1,0 +1,1 @@
+from .wrapper import getrmsd
